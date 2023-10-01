@@ -114,16 +114,18 @@ while (S_sair)
                     Console.WriteLine("------------------------------------");
                     try
                     {
-                        StreamReader sr =
-                            new StreamReader("D:\\Programação\\C#\\src\\ConsoleApp3\\ConsoleApp3\\teste1.txt");
+                        StreamReader sr = new StreamReader("text.txt");
+                        Console.ForegroundColor = ConsoleColor.Cyan;
                         Console.WriteLine("Lista: ");
                         line = sr.ReadLine();
                         while (line != null)
                         {
+                            Console.ForegroundColor = ConsoleColor.Cyan;
                             Console.WriteLine(line);
+                            Console.ForegroundColor = ConsoleColor.White;
                             line = sr.ReadLine();
                         }
-
+                        Console.WriteLine("------------------------------------");
                         sr.Close();
                     }
                     catch (Exception e)
@@ -154,7 +156,7 @@ while (S_sair)
                         Console.ForegroundColor = ConsoleColor.White;
                         try
                         {
-                            StreamWriter sw = new StreamWriter("D:\\Programação\\C#\\src\\ConsoleApp3\\ConsoleApp3\\teste1.txt",true, Encoding.ASCII);
+                            StreamWriter sw = new StreamWriter("text.txt",true, Encoding.ASCII);
                             sw.WriteLine("  " + nome + "   " + idade);
                             sw.Close();
                             Console.ForegroundColor = ConsoleColor.Green;
@@ -195,6 +197,7 @@ while (S_sair)
                     if (simb.ToLower() == "s")
                     {
                         irCall = false;
+                        sistemCom = true;
                     }
                     if (simb.ToLower() != "1" && simb.ToLower() != "2" && simb.ToLower() != "3" && simb.ToLower() != "4" && simb.ToLower() != "s")
                     {
