@@ -459,61 +459,68 @@ while (S_sair)
                     CMDES = Console.ReadLine();
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("------------------------------------");
-                    if (CMDES.StartsWith("appcadastrarpessoa") && CMDES.EndsWith("run"))
+
+                    if (CMDES.EndsWith("run"))
                     {
+                        if (CMDES.StartsWith("appcadastrarpessoa"))
+                        {
                             n = "1";
                             ComInvalido = true;
                             sistemCom = false;
+                        }
+                        
+                        if (CMDES.StartsWith("calculadora"))
+                        {
+                                n = "2";
+                                ComInvalido = true;
+                                sistemCom = false;
+                        }
+
+                        if (CMDES.StartsWith("calculadorapi") && CMDES.EndsWith("run"))
+                        {
+                                n = "3";
+                                ComInvalido = true;
+                                sistemCom = false;
+                        }
+
+                        if (CMDES.StartsWith("gamesomar") && CMDES.EndsWith("run"))
+                        {
+                                n = "4";
+                                ComInvalido = true;
+                                sistemCom = false;
+                        }
                     }
 
-                    if (CMDES.StartsWith("calculadora") && CMDES.EndsWith("run"))
+                    if (CMDES.StartsWith("console"))
                     {
-                            n = "2";
+                        if (CMDES.EndsWith("vermelho"))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
                             ComInvalido = true;
-                            sistemCom = false;
+                        }
+
+                        if (CMDES.EndsWith("azul"))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            ComInvalido = true;
+                        }
+
+                        if (CMDES.EndsWith("verde"))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            ComInvalido = true;
+                        }
+
+                        if (CMDES.EndsWith("branco"))
+                        {
+                            Console.ForegroundColor = ConsoleColor.White;
+                            ComInvalido = true;
+                        }
                     }
 
-                    if (CMDES.StartsWith("calculadorapi") && CMDES.EndsWith("run"))
-                    {
-                            n = "3";
-                            ComInvalido = true;
-                            sistemCom = false;
-                    }
-
-                    if (CMDES.StartsWith("gamesomar") && CMDES.EndsWith("run"))
-                    {
-                            n = "4";
-                            ComInvalido = true;
-                            sistemCom = false;
-                    }
-
-                    if (CMDES.StartsWith("sair") && CMDES.EndsWith("sistema"))
+                    if (CMDES == "sair sistema")
                     {
                         S_sair = false;
-                        ComInvalido = true;
-                    }
-
-                    if (CMDES.StartsWith("console") && CMDES.EndsWith("vermelho"))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        ComInvalido = true;
-                    }
-
-                    if (CMDES.StartsWith("console") && CMDES.EndsWith("azul"))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Blue;
-                        ComInvalido = true;
-                    }
-
-                    if (CMDES.StartsWith("console") && CMDES.EndsWith("verde"))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        ComInvalido = true;
-                    }
-
-                    if (CMDES.StartsWith("console") && CMDES.EndsWith("branco"))
-                    {
-                        Console.ForegroundColor = ConsoleColor.White;
                         ComInvalido = true;
                     }
 
